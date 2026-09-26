@@ -657,3 +657,257 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Formularios conectados al flujo Sprint 1 */
+.form-group textarea {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  color: var(--text-main);
+  font-size: 0.92rem;
+  font-family: inherit;
+  line-height: 1.5;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+.form-group input[aria-invalid='true'],
+.form-group textarea[aria-invalid='true'] {
+  border-color: #fb7185;
+}
+
+.field-error {
+  color: #fda4af;
+  font-size: 0.78rem;
+  margin-top: 6px;
+}
+
+.required-note {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  margin: -2px 0 12px;
+}
+
+.switch-field {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 14px;
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+}
+
+.switch-field input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--primary);
+}
+
+.switch-field label {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.switch-field label span {
+  color: var(--text-main);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.switch-field label small {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.btn-primary:disabled,
+.form-group input:disabled,
+.form-group textarea:disabled,
+.switch-field input:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.feedback-banner {
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  font-size: 0.88rem;
+}
+
+.feedback-error {
+  color: #fecdd3;
+  background: rgba(225, 29, 72, 0.12);
+  border: 1px solid rgba(251, 113, 133, 0.35);
+}
+
+.feedback-success {
+  color: #a7f3d0;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.32);
+}
+
+/* Detalle real y plan logístico */
+.type-badge,
+.priority-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.type-badge {
+  color: #a5b4fc;
+  background: var(--primary-glow);
+  border: 1px solid rgba(165, 180, 252, 0.2);
+}
+
+.priority-badge {
+  color: #fcd34d;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.detail-description-section h2 {
+  color: var(--text-sub);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.plan-section {
+  margin-top: 28px;
+}
+
+.plan-header {
+  align-items: flex-end;
+}
+
+.section-description {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin-top: 3px;
+}
+
+.plan-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.85fr) minmax(300px, 1.15fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.subtask-form-card,
+.subtask-list {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.subtask-form-card > h3 {
+  font-size: 1rem;
+  margin-bottom: 18px;
+}
+
+.subtask-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 220px;
+}
+
+.subtask-card {
+  background: rgba(15, 23, 42, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  padding: 15px;
+}
+
+.subtask-card h3 {
+  color: var(--text-main);
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.subtask-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.empty-state,
+.page-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.empty-state {
+  flex: 1;
+  min-height: 175px;
+  color: var(--text-muted);
+}
+
+.empty-state > span,
+.state-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.empty-state h3 {
+  color: var(--text-sub);
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.empty-state p,
+.page-state p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.page-state {
+  min-height: 65vh;
+  gap: 8px;
+}
+
+.page-state h1 {
+  font-size: 1.5rem;
+}
+
+.page-state .btn-secondary {
+  margin-top: 12px;
+}
+
+button.btn-secondary {
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .plan-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-header {
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
